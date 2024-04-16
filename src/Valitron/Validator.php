@@ -1195,7 +1195,7 @@ class Validator
         }
     }
 
-    private function validationMustBeExcecuted($validation, $field, $values, $multiple){
+    protected function validationMustBeExcecuted($validation, $field, $values, $multiple){
         //always excecute requiredWith(out) rules
         if (in_array($validation['rule'], array('requiredWith', 'requiredWithout'))){
             return true;
